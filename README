@@ -1,0 +1,19 @@
+﻿Assignment 2 - CS457 - Alexandros Markodimitrakis CSD4337
+
+All exercises are done as instructed in the assignment.
+
+I have tested the code on 'portokali' machine of the uni and it works as expected.
+
+There is a Makefile with 3 rules:
+    "make antivirus" : Compiles the antivirus.c file which has the 4 functionalities and creates the executable "antivirus"
+    "make ransom" : Compiles the ransom.c file which is a simple ransomware and creates the executable "ransom"
+    "make clean" : Removes the compiled files and object files
+
+./antivirus help : Prints the help message
+
+./ransom <filename> : Encrypts the file with the name <filename> using a simple XOR encryption with the key 0xFF.
+                      The encrypted file is saved with the name <filename>.locked
+
+'Target' folder contains the files for testing the antivirus. (It is the same as given in the assignment slightly modified to include some extra stuff)
+
+I have written a YARA rule to detect the ransomware. The rule is in the file "kozalibear.yara".
